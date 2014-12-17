@@ -279,6 +279,7 @@ def add_article():
 def test_mobile():
 	return render_template("test_mobile.html")
 
+#主函数
 if __name__ == '__main__':
 	app.debug = True
 	#app.run(host='0.0.0.0')
