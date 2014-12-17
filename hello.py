@@ -15,15 +15,17 @@ app.config.from_object(__name__)
 
 
 
-#测试路由
+#测试用路由
 @app.route('/hh')
 def hh():
 	haha = ''
 	return render_template("pic_pc.html")
-
+#跳转路由，跳到PC或是移动网页，未实现响应式布局
 @app.route('/')
 def turn():
 	return render_template("turn.html")
+
+#PC-index
 @app.route('/index/')
 @app.route('/index')
 def index():
@@ -59,6 +61,7 @@ def index():
 		print 'db is wrong'
 	return render_template("index.html",dict=dict,paper=1,artlen=artlen)
 
+#PC-翻页
 @app.route('/index/next/<int:paper>')
 def paper(paper):
 	try:
@@ -98,6 +101,7 @@ def paper(paper):
 		print 'db is wrong'
 	return render_template("index.html",dict=dict,paper=paper,artlen=artlen)
 
+'''
 @app.route('/index/last/<int:paper>')
 def paperlast(paper):
 	try:
@@ -133,11 +137,9 @@ def paperlast(paper):
 	except:
 		print 'db is wrong'
 	return render_template("index.html",dict=dict,paper=paper,artlen=artlen)
+'''
 
-@app.route('/test_mobile')
-def test_mobile():
-	return render_template("test_mobile.html")
-
+#PC-文集路由
 @app.route('/article/<int:article_id>')
 @app.route('/index/article/<int:article_id>')
 def article(article_id):
@@ -155,14 +157,7 @@ def article(article_id):
 	return render_template("article.html",title=title,content=content,date=date,img=img)
 
 
-@app.route('/article/edit',methods=['GET', 'POST'])
-def edit():
-	return render_template("edit.html")
-
-@app.route('/add_article')
-def add_article():
-	pass
-
+#PC-图集路由
 @app.route('/img/<string:pla>')
 def img(pla):
 	if pla == 'pc':
@@ -223,7 +218,7 @@ def img(pla):
 	else:
 		return render_template("img_mobile.html")
 
-
+#PC-文章列表页面路由
 @app.route('/article_list')
 def article_list():
 	month_list = [0 for x in range(12)]
@@ -259,11 +254,30 @@ def article_list():
 	conn.close()
 	return render_template("article_list.html",year_list=year_list,year_no=year_no,firstyear=firstyear)
 
+#PC-个人简介页面路由
 @app.route('/introduce')
 def introduce():
 	return render_template("introduce.html")
 
+#-------------------------------#
+#以下是后台的路由
+#-------------------------------#
 
+#PC-文章编辑路由（未实现）
+@app.route('/article/edit',methods=['GET', 'POST'])
+def edit():
+	return render_template("edit.html")
+
+#PC-添加文章路由（未实现）
+@app.route('/add_article')
+def add_article():
+	pass
+	
+
+#MOBILE-index
+@app.route('/test_mobile')
+def test_mobile():
+	return render_template("test_mobile.html")
 
 if __name__ == '__main__':
 	app.debug = True
