@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>图集</title>
+	<style type="text/css">
+body{
+	margin: 0px;
+	background-color:#eee;
+}
+
+h1{
+	text-align:center;
+}
+
+ #navigation{
+                height:20px; 
+                width: 100%;
+                border-bottom-left-radius: 8px;
+                border-bottom-right-radius: 8px;
+                background-color: white;
+                box-shadow: black 0px 0px 3px 0px;
+                text-align: center;
+                font-size: 12px;
+            }
+
+.container{
+	margin:60px ; 
+	
+}
+
+.container img{
+	padding:10px 10px 15px; 
+	background:white; 
+	border:1px solid white; 
+	box-shadow:2px 2px 3px rgba(50, 50, 50, 0.4);
+	-webkit-transition:all 0.5s ease-in;
+	-moz-transition:all 0.5s ease-in;
+	transition:all 0.5s ease-in; 
+	z-index:1;
+}
+
+.container img:hover{
+	box-shadow:15px 15px 20px rgba(50, 50, 50, 0.4); 
+	-webkit-transform:rotate(0deg) scale(1.20); 
+	-moz-transform:rotate(0deg) scale(1.20); 
+	transform:rotate(0deg) scale(1.20); 
+	z-index:2;
+}
+li{
+	float: left;
+	margin: 10px;
+}
+img{
+	max-height: 200px;
+	max-width: 200px;
+}
+ul{
+	list-style-type: none;
+}
+
+
+	</style>
+
+</head>
+
+<body>
+	<div id="navigation">
+	 <a href="/index">
+        <img style="height:17px;" src="\static/img/house.png">
+    </a>
+    </div>
+<div>
+	<h1 style="color:rgb(98,98,98);">时光墙</h1>
+</div>
+	
+	<ul class="container">
+	
+		<li><img class="pic1" src="\static/img/article/2.jpg"></li>
+		<li><img class="pic2" src="\static/img/article/2.jpg"></li>
+		<li><img src="\static/img/article/2.jpg" alt=""></li>
+		<li><img src="\static/img/article/2.jpg" alt=""></li>
+		<li><img src="\static/img/article/2.jpg" alt=""></li>
+		<li><img src="\static/img/article/2.jpg" alt=""></li>		
+
+
+	</ul>
+</body>
+</html>

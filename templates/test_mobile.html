@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="\static\zepto.min.js"></script>
+
+    <script type="text/javascript">
+
+    function search()
+    {
+        alert('111');
+    }
+    </script>
+    <title>test</title>
+    <style>
+    #body{
+          background-color: rgb(45,45,45);
+
+    }
+            #container{
+                margin-top: 40px;
+                      }
+            #side,#content,img{
+                background-color: white;
+                border-bottom-left-radius: 50px;
+                border-bottom-right-radius: 50px;
+                border-top-left-radius: 50px;
+                border-top-right-radius: 50px;
+                box-shadow: black 0px 0px 10px 0px;
+                           }
+            #side{
+                color: rgb(98, 98, 98);
+                font-family: 微软雅黑,'Microsoft Yahei';
+                font-size: 12px;
+                width: 180px;
+                height: 440px;
+                position: fixed;
+                                        }
+
+            #content1{
+                background-color: rgb(61,61,61);
+                border-bottom-left-radius: 50px;
+                border-bottom-right-radius: 50px;
+                border-top-left-radius: 50px;
+                border-top-right-radius: 50px;
+                box-shadow: inset black 0px 0px 10px 0px;
+            }
+
+
+            #content ,#content1{
+                color: rgb(143,143,143);
+                font-size: 50px;
+                height: 550px;
+                font-family: 微软雅黑,'Microsoft Yahei';
+                margin-bottom: 20px;
+                margin-left: 0px;
+                margin-right: 0px;
+                margin-top: 0px;
+                position: relative;
+                }
+            .text{
+                padding-top: 20px;
+            }
+            img{
+                border-bottom-left-radius: 0px;
+                border-bottom-right-radius: 0px;
+            }
+            ul{
+                list-style-type: none;
+                text-align: center;
+                padding: 0px;
+                margin: 0px;
+                border-bottom-left-radius: 0px;
+                border-bottom-right-radius: 0px;
+            }
+            li{
+                background-color: rgb(220,220,220);
+                border-bottom-style: solid;
+                border-width: 3px;
+                border-color: rgb(190,190,190);
+                padding-top: 5px;
+                padding-bottom: 7px;
+                padding-left: 3px;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+            #change a{
+                display: inline-block;
+                width: 180px;
+                overflow: hidden;
+            }
+          #side ,#content1 a:link,a:visited{
+                color: rgb(98, 98, 98);
+                text-decoration: none;
+
+            }
+            #side a:hover{
+                color: red;
+                text-decoration: none;
+            }
+            #change{
+
+                transition:all .5s ease-out .0s;
+            }
+
+            .tran:hover{
+                color: red;
+                padding-left: 10px;
+            }
+    </style>
+</head>
+<body id="body">
+   <div id="container">
+        <div id="content1" >
+         <div style="padding-top:25px;text-align:center;">
+                    我们不停的翻弄着回忆<br/>
+                    却再也找不回那时的自己<br/>
+                    红尘一梦，不再追寻
+                </div>
+                <div style="margin-left:20%;margin-right:20%;margin-top:10px;position:relative;bottom:-20px;">
+                    <ul>
+                       <li  style="margin-bottom:20px;"><a href="">简介</a></li>
+                        <li style="margin-bottom:20px"><a href="">文集</a></li>
+                        <li style="margin-bottom:20px"><a href="/img/a">图集</a></li>
+                    </ul>
+                </div>
+        </div>
+        <div id="content">
+            <div id="text_1" class="text">
+                
+            </div>
+        </div>
+    </div> 
+    <script type="text/javascript">
+            var winWidth = $(window).width();
+            var i = 1;
+            var string = '';
+           var width = winWidth-20;
+         //  $('#content').css('width',winWidth);
+        var a = $('#container').css({marginLeft:'10px',marginRight:'10px'});
+
+     //   string += 'nihaoyayandkjf';
+       // $('#text_'+i).html(string);
+        </script>
+</body>
+</html>

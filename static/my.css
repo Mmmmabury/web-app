@@ -1,0 +1,210 @@
+@charset "UTF-8";
+    #body{
+                background-color: rgb(45,45,45);
+                margin: 0px;
+    }
+            #container{
+                margin-top: 8%;
+                width: 700px;
+                      }
+            #side,#content,img,#navigation1,#navigation2{
+                background-color: white;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                box-shadow: black 0px 0px 3px 0px;
+                           }
+            #side{
+                color: rgb(98, 98, 98);
+                font-family: 微软雅黑,'Microsoft Yahei';
+                font-size: 12px;
+                width: 180px;
+                height: 440px;
+                position: fixed;
+                            }
+
+            #content{
+                color: rgb(98, 98, 98);
+                font-size: 12px;
+                font-family: 微软雅黑,'Microsoft Yahei';
+                margin-bottom: 20px;
+                margin-left: 200px;
+                margin-right: 0px;
+                margin-top: 0px;
+                position: relative;
+                width: 500px;
+                overflow:hidden
+            }
+            img{
+                border-bottom-left-radius: 0px;
+                border-bottom-right-radius: 0px;
+            }
+            ul{
+                list-style-type: none;
+                text-align: left;
+                padding: 0px;
+                margin: 0px;
+            }
+            li{
+                background-color: rgb(220,220,220);
+                border-bottom-style: solid;
+                border-width: 1px;
+                border-color: rgb(190,190,190);
+                padding-top: 5px;
+                padding-bottom: 7px;
+                padding-left: 3px;
+            }
+            #change a{
+                display: inline-block;
+                width: 180px;
+                overflow: hidden;
+            }
+            #side a:link,a:visited{
+                color: rgb(98, 98, 98);
+                text-decoration: none;
+
+            }
+            #side a:hover{
+                color: red;
+                text-decoration: none;
+            }
+            a{
+                color: rgb(98, 98, 98);
+                text-decoration: none;
+            }
+          #content a:link,a:visited{
+                color: rgb(98, 98, 98);
+                text-decoration: none;
+
+            }
+            #content a:hover,#navigation1 a:hover{
+                color: red;
+                text-decoration: none;
+            }
+
+            #change{
+                transition:all .5s ease-out .0s;
+            }
+            #tou{
+                 transition:all .1s ease-out .0s;
+            }
+            #hah{
+                 transition:all 1s ease-out .0s;
+                             }
+            #navigation1{
+                height:30px; 
+                width: 500px;
+                color: rgb(98, 98, 98);
+                font-size: 12px;
+                font-family: 微软雅黑,'Microsoft Yahei';
+                margin-bottom: 20px;
+                margin-left: 200px;
+                margin-right: 0px;
+                margin-top: 0px;
+                position: relative;
+                width: 500px;
+                overflow:hidden;
+                text-align:center;
+                padding-top: 10px;
+            }
+             #navigation2{
+                height:30px; 
+                width: 500px;
+                color: rgb(98, 98, 98);
+                font-size: 12px;
+                font-family: 微软雅黑,'Microsoft Yahei';
+                margin-bottom: 20px;
+                margin-left: 200px;
+                margin-right: 0px;
+                margin-top: 0px;
+                position: relative;
+                width: 500px;
+                overflow:hidden;
+                text-align:center;
+                padding-top: 10px;
+            }
+            #navigation1 a{
+            }
+            #navigation2 a:hover{
+                color: red;
+            }
+            .navigation{
+                height:20px; 
+                width: 100%;
+                border-bottom-left-radius: 8px;
+                border-bottom-right-radius: 8px;
+                background-color: white;
+                box-shadow: black 0px 0px 3px 0px;
+                text-align: center;
+                font-size: 12px;
+            }
+            .edit{
+                background-color: white;
+                box-shadow: black 0px 0px 3px 0px;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+
+            }
+            .tran:hover{
+                color: red;
+                padding-left: 10px;
+            }
+
+            .tran2:hover{
+                 box-shadow: red 0px 0px 4px 1px;
+            }
+
+            .tran3:hover{
+                color: red;
+                
+            }
+
+            .title {
+                font-size: 20px;
+                font-weight: bold;
+                text-align: left;
+                padding-top: 10px;
+                padding-left: 20px;
+                padding-bottom: 10px;
+                border-bottom-style: solid;
+                border-bottom-color: rgb(190,190,190);
+                border-bottom-width: 1px;
+                height: 30px;
+                transition:all 1.5s ease-out .0s;
+            }
+            .title:hover{
+                 padding-left: 210px;
+            }
+            .title a{
+                   overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                display: inline-block;
+                width: 490px;
+                right:200px;
+                position:relative;
+                padding-left:200px;
+                height:30px; 
+            }
+             .text{
+                padding:20px;
+                padding-top: 0px;
+                word-break:break-all;
+                word-wrap:break-word;
+                max-height: 700px;
+                        }
+               .image{
+                padding: 10px;
+
+            }
+            .image img{
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+                max-height: 500px;
+            }
+            pre{
+                
+                            }

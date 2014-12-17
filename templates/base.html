@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="\static\zepto.min.js"></script>
+    <title>博客主页</title>
+   <link href="/static/animate.css" rel="stylesheet" type="text/css"/>
+   <link rel="stylesheet" type="text/css" href="/static/my.css">
+</head>
+<body id="body">
+<div class="navigation">
+    这里是我的博客
+    </div>
+
+   <div id="container">
+        <div id="side">
+                <div style="border-bottom-style:solid;border-width: 1px;
+                 border-color: rgb(190,190,190)" >
+                    <a href='/index'>
+                        <img class="tran2" id="tou" width="180px" height="230px" src="\static/img/tou.jpg" alt="">
+                    </a>
+                </div>
+                <div>
+                    <ul>
+                       <li id="change" class="tran"><a href="/introduce">简介</a></li>
+                        <li id="change" class="tran"><a href="/article_list">文集</a></li>
+                        <li id="change" class="tran"><a href="/img/pc">图集</a></li>
+                    </ul>
+                </div>
+                <div style="padding-top:10px;text-align:center;">
+                    我们不停的翻弄着回忆<br/>
+                    却再也找不回那时的自己<br/>
+                    红尘一梦，不再追寻
+                </div>
+                <div style="position:relative;bottom:-10px;">
+                    <form align="center" action="http://www.baidu.com/" target="_blank" >
+                        <input type="text" name="search" maxlength="100">
+                    </form>
+                </div>
+            </div>
+            {% block content %}{% endblock %}
+      </div>
+        <script type="text/javascript">
+            var aa = '';
+            var winWidth = $(window).width();
+            var i = 1;
+            var string = '';
+            if(winWidth>=700)
+            {
+            var marginleft = parseInt((winWidth - 700)/2);
+        }
+        else
+        {
+            var marginleft = 0;
+            $('#side').css('position',null);
+            $('#side').css('position','relative');
+            $('#side').css({marginLeft:'200px',marginBottom:'20px'});
+        }
+        var a = $('#container').css({marginLeft:marginleft+'px',marginRight:marginleft+'px'});
+     //   string += 'nihaoyayandkjf';
+       // $('#text_'+i).html(string);
+        </script>
+        </body>
+</html>

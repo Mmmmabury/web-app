@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>简介</title>
+	<script type="text/javascript" src="\static/zepto.min.js"></script>
+	<style type="text/css">
+body{
+	margin: 0px;
+	background-color:#eee;
+}
+
+h1{
+	text-align:center;
+}
+
+ #navigation{
+                height:20px; 
+                width: 100%;
+                border-bottom-left-radius: 8px;
+                border-bottom-right-radius: 8px;
+                background-color: white;
+                box-shadow: black 0px 0px 3px 0px;
+                text-align: center;
+                font-size: 12px;
+            }
+
+.container{
+	margin:60px ; 
+	position:center;
+}
+img{
+	max-width: 200px;
+	max-height: 400px;
+}
+
+	</style>
+
+</head>
+
+<body>
+	<div id="navigation">
+	 <a href="/index">
+        <img style="height:17px; " src="\static/img/house.png">
+    </a>
+    </div>
+<div>
+	<h1 style="color:rgb(98,98,98);">个人简介</h1>
+</div>
+<div  id="hh">
+<div style="background-color:white;display:inline-block;width:100%;">
+	<img style="float:left;" src="\static/img/in.jpg">
+	<table style="padding-left:20px;padding-top:20px;">
+		<tr>
+				<td>我的名字：</td>
+				<td>嗯</td>
+			</tr>
+			<tr>
+				<td>我的生日：</td>
+				<td>你猜</td>
+			</tr>
+			<tr>
+				<td>工作地址：</td>
+				<td>xxxxx</td>
+			</tr>	
+			<tr>
+				<td>个人微博：</td>
+				<td><a href=""></a></td>
+			</tr>
+			<tr>
+				<td>个人邮箱：</td>
+				<td><a href=""></a></td>
+			</tr>
+	</table>
+	
+</div>	
+</div>
+<script type="text/javascript">
+		var winWidth = $(window).width();
+		var left = (winWidth - 1000)/2;
+		$('#hh').css({marginLeft:left+'px',marginRight:left+'px'});
+</script>
+</body>
+</html>

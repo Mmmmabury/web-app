@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if paper>1 %}
+ <div id="navigation2" class="animated zoomIn">
+                <a href="/index/next/{{paper-2}}">上一页</a>
+            </div>
+{% endif %}
+{% for post in dict %}
+        <div id="content" class="animated zoomIn" >
+            <div  class="title" >
+            	<a  href="/article/{{post.article_id}}">
+              		{{post.title}}
+            	</a>
+            </div>
+            <div id="hah" class="tran3" style="float:right;text-align:right;padding-right:10px;width:500px;">
+            	{{post.date}}
+            </div>
+            {% if post.image %}
+            <div class="image">
+            <img width="480px" src="{{post.image}}">
+             <div class="text" >
+                <pre>
+            {{post.content}}
+                </pre>
+            </div>
+            </div>
+            {% else %}
+            <div class="text" id="change">
+                <pre>
+            {{post.content}}
+                </pre>
+            </div>
+            {%endif%}
+        </div>
+        {% endfor %}
+        <div id="navigation1" class="animated zoomIn">
+                <a href="/index/next/{{paper}}">下一页(第{{paper}}页)(共{{artlen}}页)
+                </a>
+                		{% for i in range(artlen) %}
+                		{% if i == 0 %}
+                		<a href="/index/">{{i+1}}</a>
+			{% else %}
+                		<a href="/index/next/{{i}}">{{i+1}}</a>
+                		{% endif %}
+                		{% endfor %}
+            </div>
+{% endblock %}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="\static\zepto.min.js"></script>
+    <title>test</title>
+   <link href="/static/animate.css" rel="stylesheet" type="text/css"/>
+   <link rel="stylesheet" type="text/css" href="/static/my.css">
+</head>
+<body id="body">
+   <div id="container">
+        <div id="side">
+                <div style="border-bottom-style:solid;border-width: 1px;
+                 border-color: rgb(190,190,190)">
+                    <a href=#>
+                        <img width="180px" height="230px" src="static/img/tou.jpg" alt="">
+                    </a>
+                </div>
+                <div>
+                    <ul>
+                       <li id="change" class="tran"><a href="127.0.0.1:5000/hh/1">简介</a></li>
+                        <li id="change" class="tran"><a href="">文集</a></li>
+                        <li id="change" class="tran"><a href="#">图集</a></li>
+                    </ul>
+                </div>
+                <div style="padding-top:10px;text-align:center;">
+                    我们不停的翻弄着回忆<br/>
+                    却再也找不回那时的自己<br/>
+                    红尘一梦，不再追寻
+                </div>
+                <div style="position:relative;bottom:-10px;">
+                    <form align="center" action="http://www.baidu.com/baidu" target="_blank" >
+                        <input type="text" name="search" maxlength="100">
+                        <input type="submit" value="查找">
+                    </form>
+                </div>
+        </div>
+{% for post in dict %}
+        <div id="content" class="animated flipInX">
+            <div  class="title">
+            <a href="">
+              {{post.title}}
+            </a>
+            </div>
+            {% if post.image %}
+            <div class="image">
+            <img width="480px" src="{{post.image}}">
+            </div>
+            {% else %}
+            <div class="text">
+                <pre>
+            {{post.content}}
+                </pre>
+            </div>
+            {%endif%}
+        </div>
+         {% endfor %}
+    </div> 
+    <script type="text/javascript">
+            var aa = '';
+            var winWidth = $(window).width();
+            var i = 1;
+            var string = '';
+            if(winWidth>=700)
+            {
+            var marginleft = parseInt((winWidth - 700)/2);
+        }
+        else
+        {
+            var marginleft = 0;
+        }
+        var a = $('#container').css({marginLeft:marginleft+'px',marginRight:marginleft+'px'});
+     //   string += 'nihaoyayandkjf';
+       // $('#text_'+i).html(string);
+        </script>
+</body>
+</html>

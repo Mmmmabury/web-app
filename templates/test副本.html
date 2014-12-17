@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="\static\zepto.min.js"></script>
+
+    <script type="text/javascript">
+
+    function search()
+    {
+        alert('111');
+    }
+    </script>
+    <title>test</title>
+   <link href="/static/animate.css" rel="stylesheet" type="text/css"/>
+    <style>
+    #body{
+          background-color: rgb(45,45,45);
+
+    }
+            #container{
+                margin-top: 10%;
+                      }
+            #side,#content,img{
+                background-color: white;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                box-shadow: black 0px 0px 3px 0px;
+                           }
+            #side{
+                color: rgb(98, 98, 98);
+                font-family: 微软雅黑,'Microsoft Yahei';
+                font-size: 12px;
+                width: 180px;
+                height: 440px;
+                position: fixed;
+                            }
+
+            #content{
+                color: rgb(98, 98, 98);
+                font-size: 12px;
+                font-family: 微软雅黑,'Microsoft Yahei';
+                margin-bottom: 20px;
+                margin-left: 200px;
+                margin-right: 0px;
+                margin-top: 0px;
+                position: relative;
+                width: 500px;
+                overflow:hidden
+            }
+            img{
+                border-bottom-left-radius: 0px;
+                border-bottom-right-radius: 0px;
+            }
+            ul{
+                list-style-type: none;
+                text-align: left;
+                padding: 0px;
+                margin: 0px;
+            }
+            li{
+                background-color: rgb(220,220,220);
+                border-bottom-style: solid;
+                border-width: 1px;
+                border-color: rgb(190,190,190);
+                padding-top: 5px;
+                padding-bottom: 7px;
+                padding-left: 3px;
+            }
+            #change a{
+                display: inline-block;
+                width: 180px;
+                overflow: hidden;
+            }
+            #side a:link,a:visited{
+                color: rgb(98, 98, 98);
+                text-decoration: none;
+
+            }
+            #side a:hover{
+                color: red;
+                text-decoration: none;
+            }
+            #content a{
+
+            }
+          #content a:link,a:visited{
+                color: rgb(98, 98, 98);
+                text-decoration: none;
+
+            }
+            #content a:hover{
+                color: red;
+                text-decoration: none;
+            }
+
+            #change{
+                transition:all .5s ease-out .0s;
+            }
+
+            .tran:hover{
+                color: red;
+                padding-left: 10px;
+            }
+
+            .title {
+                font-size: 20px;
+                font-weight: bold;
+                text-align: left;
+                padding-top: 10px;
+                padding-left: 20px;
+                padding-bottom: 10px;
+                border-bottom-style: solid;
+                border-bottom-color: rgb(190,190,190);
+                border-bottom-width: 1px;
+                height: 30px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+
+             .text{
+                padding:20px;
+                padding-top: 0px;
+                word-break:break-all;
+                word-wrap:break-word;
+                max-height: 500px;
+                        }
+            .image{
+                padding: 10px;
+
+            }
+            .image img{
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+
+            }
+            pre{
+                
+                            }
+    </style>
+</head>
+<body id="body">
+   <div id="container">
+        <div id="side">
+                <div style="border-bottom-style:solid;border-width: 1px;
+                 border-color: rgb(190,190,190)">
+                    <a href=#>
+                        <img width="180px" height="230px" src="static/img/tou.jpg" alt="">
+                    </a>
+                </div>
+                <div>
+                    <ul>
+                       <li id="change" class="tran"><a href="">简介</a></li>
+                        <li id="change" class="tran"><a href="">文集</a></li>
+                        <li id="change" class="tran"><a href="#">图集</a></li>
+                    </ul>
+                </div>
+                <div style="padding-top:10px;text-align:center;">
+                    我们不停的翻弄着回忆<br/>
+                    却再也找不回那时的自己<br/>
+                    红尘一梦，不再追寻
+                </div>
+                <div style="position:relative;bottom:-10px;">
+                    <form align="center" action="http://www.baidu.com/baidu" target="_blank" >
+                        <input type="text" name="search" maxlength="100">
+                        <input type="submit" value="查找">
+                    </form>
+                </div>
+        </div>
+{% for post in dict %}
+        <div id="content" class="animated flipInX">
+            <div  class="title">
+            <a href="">
+              {{post.title}}
+            </a>
+            </div>
+            {% if post.image %}
+            <div class="image">
+            <img width="480px" src="{{post.image}}">
+            </div>
+            {% else %}
+            <div class="text">
+                <pre>
+            {{post.content}}
+                </pre>
+            </div>
+            {%endif%}
+        </div>
+         {% endfor %}
+    </div> 
+    <script type="text/javascript">
+            var aa = '';
+            var winWidth = $(window).width();
+            var i = 1;
+            var string = '';
+            if(winWidth>=700)
+            {
+            var marginleft = parseInt((winWidth - 700)/2);
+        }
+        else
+        {
+            var marginleft = 0;
+        }
+        var a = $('#container').css({marginLeft:marginleft+'px',marginRight:marginleft+'px'});
+     //   string += 'nihaoyayandkjf';
+       // $('#text_'+i).html(string);
+        </script>
+</body>
+</html>

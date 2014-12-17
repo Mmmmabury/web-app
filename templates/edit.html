@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="\static\zepto.min.js"></script>
+    <title>add</title>
+   <link href="/static/animate.css" rel="stylesheet" type="text/css"/>
+   <link rel="stylesheet" type="text/css" href="/static/my.css">
+   <script type="text/javascript">
+   	        function name_check(){
+        		var name = $('#name').attr('value')
+        		if(name=='')
+        		{
+        			$('#name_text').html('用户名不能为空');
+        		}
+        		else
+        		{
+        			$('#name_text').html(' ');
+        		}
+        }
+         function password_check(){
+        		var name = $('#password').attr('value')
+        		if(name=='')
+        		{
+        			$('#password_text').html('密码不能为空');
+        		}
+        		else
+        		{
+        			$('#password_text').html(' ');
+        		}
+        }
+   </script>
+
+
+
+</head>
+<body id="body">
+<div class="navigation" >
+	 <a href="/article_list">
+        <img  style="height:17px; box-shadow: white 0px 0px 0px 0px;" src="\static/img/house.png">
+    </a>
+    </div>
+	<div id="container" class="edit">
+		<form action="" align='center' method="post">
+			用户名:<input type="text" id="name" name="username" onblur="name_check()" /><span style="color:red;font-size:12px;" id="name_text"></span><br/>
+			密码:<input type="password" name="password" onblur="password_check()" id="password" /><span style="color:red;font-size:12px;" id="password_text"></span><br/>
+			<input type="submit" value="添加文章"></input>
+			<input type="submit" value="添加图片"></input>
+		</form>
+	</div>
+<script type="text/javascript">
+            var aa = '';
+            var winWidth = $(window).width();
+            var i = 1;
+            var string = '';
+            if(winWidth>=700)
+            {
+            var marginleft = parseInt((winWidth - 700)/2);
+        }
+        else
+        {
+            var marginleft = 0;
+        }
+        var a = $('#container').css({marginLeft:marginleft+'px',marginRight:marginleft+'px'});
+
+ </script>
+</body>
+</html>

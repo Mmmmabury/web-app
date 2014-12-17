@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>文集</title>
+	<link rel="stylesheet" type="text/css" href="\static/animate.css">
+	<style type="text/css">
+		body{
+	margin: 0px;
+	background-color:rgb(200,200,200);
+}
+
+h1{
+	text-align:center;
+}
+
+ #navigation{
+                height:20px; 
+                width: 100%;
+                border-bottom-left-radius: 8px;
+                border-bottom-right-radius: 8px;
+                background-color: white;
+                box-shadow: black 0px 0px 3px 0px;
+                text-align: center;
+                font-size: 12px;
+            }
+ul{
+	margin: 0px;
+	list-style-type: none;
+	padding-left: 60px;
+	height:300px;
+	clear:both;
+	display: block;
+}
+.container{
+	margin:20px; 
+	display:block;
+	background-color: rgb(220,220,220);
+	}
+
+#article{
+	width: 240px;
+	height: 240px;
+	float: left;
+	margin: 10px;
+	margin-top: 15px;
+	background-color: white;
+           box-shadow: rgb(210,210,210) 0px 0px 1px 3px;
+           transition:all 1s ease; 
+           z-index: 1;
+           border-bottom-left-radius: 8px;
+           border-bottom-right-radius: 8px;
+           border-top-left-radius: 8px;
+           border-top-right-radius: 8px;
+	}
+
+#article:hover{
+	box-shadow: red 0px 0px 4px 1px;
+	z-index: 2;
+	-webkit-transform:scale(1.1); 
+}
+
+
+.title{
+	font-size: 20px;
+           font-weight: bold;
+           text-align: center;
+           padding-top: 0px;
+           padding-bottom: 10px;
+           padding-left: 10px;
+           padding-right: 10px;
+           border-bottom-style: solid;
+           border-bottom-color: rgb(190,190,190);
+           border-bottom-width: 1px;
+           height: 35px;
+           overflow: hidden;
+           white-space: nowrap;
+           text-overflow: ellipsis;
+}
+
+h2{
+	text-align: left;
+	padding-left: 20px;
+}
+
+a{
+	color: black;
+	text-decoration: none;
+}
+
+
+	</style>
+
+
+</head>
+<body>
+	<div id="navigation">
+	 <a href="/index">
+        <img style="height:17px; " src="\static/img/house.png">
+    </a>
+    </div>
+<div>
+	<h1 style="color:rgb(98,98,98);">文集</h1>
+</div>
+	<a href="article/edit">edit</a>
+	{% for a in year_no[::-1] %}
+	<div class="container">
+	<h2>{{a}}</h2>
+	<div style="display:inline-block;" >
+		{% for r in year_list[a-firstyear][::-1] %}
+		{% if r!=[] %}
+		<ul >
+			<div>
+			{{ r[0][3] }}月
+			</div>
+			{% for day in r[::-1] %}
+			
+			<li id="article" class="animated zoomIn" >
+			<a href="article/{{day[4]}}">
+				<div  class="title" >	
+              		              {{day[0]}}
+              		              <div style="font-size:12px;">
+				{{day[5]}}日
+				</div>
+            			</div>
+            			<div style="word-break: break-all;
+word-wrap: break-word;padding:15px;">
+          					<pre >
+          				{{day[1][:80]}}
+
+               				</pre>
+            			</div>
+            			</a>
+			</li>
+			
+			{% endfor %}
+			
+		</ul>
+		{% endif %}
+		{% endfor %}
+ 			</div>
+ 			</div>
+
+	{% endfor %}
+	</body>
+
+</html>
